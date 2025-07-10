@@ -1,0 +1,357 @@
+
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+
+@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300,400,500,600,700);
+/*$font-primary: 'Inter', sans-serif;*/
+@font-face {
+  font-family: 'be_vietnamregular';
+  src: url('../fonts/bevietnam-regular-webfont.woff2') format('woff2'),
+       url('../fonts/bevietnam-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'dorsaregular';
+  font-weight: normal;
+    font-style: normal;
+  src: url('../fonts/dorsa-regular-webfont.woff2') format('woff2'),
+      url('../fonts/dorsa-regular-webfont.woff') format('woff');;
+}
+
+@font-face {
+  font-family: 'dancing_scriptregular';
+  src: url('../fonts/dancingscript-variablefont_wght-webfont.woff') format('woff2'),
+       url('../fonts/dancingscript-variablefont_wght-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'barlow_condensedregular';
+  src: url('../fonts/barlowcondensed-regular-webfont.woff2') format('woff2'),
+       url('../fonts/barlowcondensed-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+$font-primary: 'Lato', sans-serif;
+$font-title: 'Cinzel', serif;
+$font-pera: 'Lato', sans-serif;
+$font-dorsa: 'dorsaregular';
+$font-regular : 'Lato', sans-serif;
+$font-list: "Lato", sans-serif;
+$font-dance: 'dancing_scriptregular';
+$font-barlow: 'barlow_condensedregular';
+$font-weight-100: 100;
+$font-weight-200: 200;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+$font-size-xs: 14px;
+$font-size-s: 16px;
+$font-size-xm: 18px;
+$font-size-xl: 20px;
+$font-size-l:24px;
+$text-gray: #7C7C7C;
+$text-black: #000000;
+$bg-black: #000000;
+$bg-white: #ffffff;
+$bg-mist: #F0E5D0;
+$mist-hover: #F4EDDF;
+$btn-gray: #404040;
+$border-color: #23273A;
+$border-form: #AAAAAA;
+$border-gray: #a3b1b8;
+$border-black: #000000;
+$border-lightgray: #AAAAAA;
+$text-white: #fff;
+$button-primary:#000000;
+$button-secondary: #dce5ed;
+$bg-gray: #E4E4E4;
+$font-size-xs: 14px;
+$brand-color: #23273A;
+$brand-hover: #40476D;
+$brand-color1: #40476D;
+$list-page-color: #F6F5F4;
+$pdp-filters-bg : #F8F8F8;
+$border-menu: 1px solid #e5e5e5;
+$border-white: 1px solid #ffffff;
+$border-theme: 1px solid #23273A;
+$text-anchor : #E0D2B8;
+$text-span : #071546;
+$text-pdp: #23273A;
+$text-theme: #000000; 
+$text-theme-dark: #ffffff; 
+$bg-dark-theme: transparent;
+$btn-ease: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+$btn-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+$cart-pdp: #23273A;
+$slider-filter-color:#EAEAEA;
+$pdp-color:#DCE5ED;
+$pdp-border: #545C72; 
+$pdp-advance-bg: linear-gradient(90deg, #7E7141 0%, #F8EFCE 50%, #827546 100%);
+$pdp-advance-bg: #23273A;
+$pdp-hover : #DCE5ED;
+$pdp-select: #545C72;
+$pdp-bg: linear-gradient(180deg, #F8EFCE 0%, #D2CAAE 100%);
+$pdp-guarantee: #F0F5F9;
+$gold-gradient: linear-gradient(180deg, #F8EFCE 0%, #D2CAAE 100%);
+$footer-color: #DCE5ED;
+$footer-text: #172246;
+$text-hover: #543588;
+$seo-text:grey;
+$footer-bg:#07182A;
+$bg-grey: #f5f5f5;
+
+@mixin font-regular {
+  /*font-family: $font-primary;*/
+  font-family: $font-regular;
+  font-weight: $font-weight-400;
+}
+@mixin font-normal {
+  font-family: $font-primary;
+  font-weight: $font-weight-400;
+}
+@mixin font-light {
+    font-family: $font-primary;
+    font-weight: $font-weight-300;
+}
+@mixin font-thin {
+  font-family: $font-primary;
+  font-weight: $font-weight-100;
+}
+@mixin font-very-thin {
+  font-family: $font-primary;
+  font-weight: $font-weight-200;
+}
+@mixin font-medium {
+    font-family: $font-primary;
+    font-weight: $font-weight-500;
+}
+@mixin font-semi {
+    font-family: $font-primary;
+    font-weight: $font-weight-600;
+}
+@mixin font-bold {
+    font-family: $font-primary;
+    font-weight: $font-weight-700;
+}
+@mixin font-title {
+    font-family: $font-title;
+    font-weight: $font-weight-400;
+}
+@mixin font-pera {
+    font-family: $font-pera;
+    font-weight: $font-weight-400;
+}
+@mixin nav-font {
+  font-family: $font-primary;
+  font-weight: $font-weight-400;
+}
+@mixin font-dorsa {
+  font-family: $font-dorsa;
+  font-weight: $font-weight-400;
+}
+@mixin font-barlow {
+  font-family: $font-barlow;
+  font-weight: $font-weight-400;
+}
+@mixin font-dance {
+  font-family: $font-dance;
+  font-weight: $font-weight-400;
+}
+@mixin border-gold {
+  background-clip: padding-box;
+  border: solid 1px transparent;
+  position: relative;
+  border-radius: 8px;
+  &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: linear-gradient(#F7D592 0%, #BC913D 10%, #FFF7E7 20%, #FFECC6 30%, #FFDFA2 40%, #F7D592 50%, #CB9836 60%, #FFDFA2 70%, #BB903E 80%, #F8D798 90%, #A27724 100%);
+  }
+}
+@mixin btn-line {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 4px;
+  border: 1px solid $border-black;
+  padding: 8px 32px;
+  transition: $btn-ease;
+  display: inline-block;
+  @include font-pera;
+  text-align: center;
+  text-decoration: none;
+  &:hover{
+    color: #fff !important;
+    background: $bg-black !important;
+    border: 1px solid $bg-black;
+  }
+}
+@mixin brand-button {
+  @include font-regular;
+  color: $text-white;
+  border: 0;
+  border-radius: 0px;
+  background: $brand-color;
+  transition: $btn-transition;
+  &:hover{
+    background: $brand-hover;
+    color: $text-white;
+  }
+}
+@mixin brand-button-outline {
+  @include font-regular;
+  color: $brand-color;
+  border: 0;
+  border-radius: 0px;
+  background: $text-white;
+  border: 1px solid $brand-color;
+  transition: $btn-transition;
+  &:hover{
+    background: $brand-color;
+    color: $text-white;
+  }
+}
+@mixin devices ($breakpoint) { //the name of the mixin is devices
+    
+    @if $breakpoint == medium-desktop {    
+        @media only screen and (max-width: 1500px) {
+          @content;
+        }
+    }
+
+    @if $breakpoint == xxl-screen {    
+      @media only screen and (min-width: 1500px) {
+        @content;
+      }
+    }
+    @if $breakpoint == xl-screen {    
+      @media only screen and (min-width: 1200px) {
+        @content;
+      }
+    }
+
+    
+    @if $breakpoint == lg-laptop {
+      @media only screen and (max-width: 1759px) and (min-width: 1501px)  {
+        @content;
+      }
+    }
+    @if $breakpoint == min-laptop {    
+        @media only screen and (max-width: 1500px) and (min-width: 1446px)  {
+          @content;
+        }  
+    }
+
+    @if $breakpoint == mid-laptop {    
+      @media only screen and (max-width: 1445px) and (min-width: 1100px)  {
+        @content;
+      }  
+  }
+
+  @if $breakpoint == sm-laptop {    
+    @media only screen and (max-width: 1366px) and (min-width: 1033px)  {
+      @content;
+    }  
+}
+
+    @if $breakpoint == pdp-nav {    
+      @media only screen and (max-width: 1600px) and (min-width: 1437px)  {
+        @content;
+      }  
+    }
+    
+    @if $breakpoint == min-screen {    
+      @media only screen and (min-width: 1033px) {
+        @content;
+      }
+    }
+    
+    @if $breakpoint == mini-desktop {    
+      @media only screen and (max-width: 1032px) {
+        @content;
+      }
+    }
+    
+    @if $breakpoint == ipad-pro {    
+      @media only screen and (max-width: 1032px) {
+        @content;
+      }
+    }
+
+
+    @if $breakpoint == only-ipad {    
+      @media only screen and (max-width: 1032px) and (min-width: 768px)  {
+        @content;
+      }
+    }
+
+    @if $breakpoint == tablet {    
+        @media only screen and (max-width: 1024px) {
+          @content;
+        }  
+    }
+
+    @if $breakpoint == mobile {    
+      @media only screen and (max-width: 767px) {
+        @content;
+      }
+    }
+ 
+    @if $breakpoint == mobile-mini {
+      @media only screen and (max-width: 481px) {
+        @content;
+      }
+    }
+    @if $breakpoint == mobile-xs-mini {
+      @media only screen and (max-width: 389.98px) {
+        @content;
+      }
+    }
+    
+    @if $breakpoint == only-ipad-pro {    
+      @media only screen and (max-width: 1032px) and (min-width: 1025px)  {
+        @content;
+      }
+    }
+}
+
+@mixin breadcrumbs-pdp {
+  .breadcrumbs {
+    background: $bg-white;
+    border: 1px solid $bg-white;
+    color: #000000;
+    display: none;
+    ul {
+      max-width: 100%;
+      padding-left: 41px;
+      li{
+        font-size: 11px;
+        a{
+          color: #000000;
+        }
+        &::after{
+          border-color: #000000;
+        }
+      }
+    }
+  }
+  .sidebar-btn{    
+    background: #ffffff;
+    border: 1px solid #E4DCBE;
+    color: #000000;
+  }
+}

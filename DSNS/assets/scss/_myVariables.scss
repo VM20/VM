@@ -1,0 +1,25 @@
+
+@font-face {
+    font-family: helveticaBlack;
+    src: url(../css/font/helvetica-neue-medium.woff);
+}
+ @font-face {
+    font-family: helveticaMedium;
+    src: url(../css/font/helvetica-neue-medium.woff);
+}
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../css/font/HelveticaNeue.ttc') format('truetype');
+}
+$font-primary: HelveticaNeue;
+$font-family-bold: helveticaBlack;
+$font-family-medium: helveticaMedium;
+$font-weight-600: 600;
+$accordion-border-radius: $spacer*0;
+$accordion--arrow-color: $white;
+$aspire-engagement: #f2f2f2;
+$aspire-wedding: #A5D2B2;
+$aspire-diamond: #A5C7D2;
+$aspire-jewellery: #B1A5D2;
+$light-gray: #fff;
+$aspire-brand: #ccc;
