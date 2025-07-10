@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <section>
+        <div class="card-box p-2">
+            <h4 id="array1">Arrays</h4>
+            <script>
+                function trash(arr){
+                    var demoarray = [];
+                    for (i=0; i < arr.length; i++){
+                        if (demoarray.indexOf(arr[i]) === -1){
+                            demoarray.push(arr[i]);
+                        }
+                    }
+                    return demoarray;
+                }
+
+                const items= [1,2,3,4,5,1];
+                const itemsCopy = [...items].concat(999, [94, 6, 5, 33]);
+
+                const len = itemsCopy.length;
+                const itemsCopy1 = [];
+                let i;
+                for (i = 0; i < len; i+=1){
+                    itemsCopy1[i] = itemsCopy[i];
+                }
+
+                const newSize = trash(itemsCopy1);
+                //console.log(arr.slice(0, newSize).join(' '))
+                document.getElementById('array1').innerHTML = newSize;
+            </script>
+
+            <div style="display: block;" class="card">
+                <div class="card-neu">
+                    <p>
+                        1. Using Set (Modern and concise)
+
+                        function getUniqueElements(arr) {
+                            return [...new Set(arr)];
+                        }
+                        
+                        const items = [1, 2, 3, 4, 5, 1];
+                        const uniqueItems = getUniqueElements(items);
+                        console.log(uniqueItems); // Output: [1, 2, 3, 4, 5]
+                    </p>
+                    <p>
+                        2. Using filter and indexOf (Older but still common)
+                        function getUniqueElements(arr) {
+                            return arr.filter((item, index, self) => {
+                                return self.indexOf(item) === index;
+                            });
+                        }
+                        
+                        const items = [1, 2, 3, 4, 5, 1];
+                        const uniqueItems = getUniqueElements(items);
+                        console.log(uniqueItems); // Output: [1, 2, 3, 4, 5]
+
+                        The original code snippet demonstrates several common pitfalls in programming, 
+                        particularly regarding variable scope, loop conditions, and return values.
+                        
+                        =====           
+                    </p>
+                    <p>
+                        Explanation:
+                        indexOf checks if the current item is already in the unique array.
+                        If it’s not (indexOf returns -1), it’s added to unique.
+                        The indexOf() method in JavaScript is used to find the first occurrence of a specified value in an array. 
+                        If the value is found, it returns the index (position); if not, it returns -1.
+
+                        array.indexOf(searchElement, fromIndex)
+                    </p>       
+
+                    <ul>
+                        <li>SearchElement: The item you're searching for.</li>
+                        <li>fromIndex (optional): The index to start the search from (default is 0).</li>
+                    </ul>
+                </div>
+                
+                <div class="card-neu">
+                    <p>
+                        Example
+
+                        var fruits = ["apple", "banana", "mango", "apple", "orange"];
+
+                        console.log(fruits.indexOf("apple"));  // 0 (first occurrence)
+                        console.log(fruits.indexOf("orange")); // 4
+                        console.log(fruits.indexOf("grape"));  // -1 (not found)
+                    </p>
+                </div>
+                <div class="card-neu">
+                    <p>
+                        Here’s a polyfill for Array.prototype.indexOf, which adds support for indexOf in older JavaScript environments 
+                        (like IE8 and earlier) where it doesn't exist.
+                    </p>
+                    <p>
+                        Just include this code at the top of your JavaScript file. 
+                        It checks if indexOf doesn't exist and defines it if needed — so it won't overwrite modern browser implementations.
+                    </p>
+                    <p>
+                        if (!Array.prototype.indexOf) {
+                            Array.prototype.indexOf = function(searchElement, fromIndex) {
+                            if (this == null) {
+                                throw new TypeError('"this" is null or not defined');
+                            }
+                        
+                            var length = this.length >>> 0; // Ensure length is a positive integer
+                            fromIndex = +fromIndex || 0;
+                        
+                            if (Math.abs(fromIndex) === Infinity) {
+                                fromIndex = 0;
+                            }
+                        
+                            if (fromIndex < 0) {
+                                fromIndex = Math.max(length + fromIndex, 0);
+                            }
+                        
+                            for (var i = fromIndex; i < length; i++) {
+                                if (i in this && this[i] === searchElement) {
+                                return i;
+                                }
+                            }
+                        
+                            return -1;
+                            };
+                        }
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        body{
+            background: #212121;
+            color: #fcfcfc;
+            margin: 0;
+            line-height: 1.5;
+            font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        }
+        .card-neu{
+            background: #171717;
+            padding: 1rem;
+            display: block;
+            border-radius: 9px;
+            margin: 1rem 0;
+            max-width: 61%;
+        }
+        p{
+            margin-bottom: 1rem;
+        }
+        .p-3{
+            padding: 1.5rem;
+        }
+        .p-2{
+            padding: 1rem;
+        }
+    </style>
+</body>
+</html>

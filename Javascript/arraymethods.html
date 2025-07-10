@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Array Methods</title>
+</head>
+<body>
+<section>
+  <div class="container">
+
+    <h1>JavaScript Array Methods with Examples</h1>
+  
+    <h2>🔁 Iteration Methods</h2>
+    <ul>
+      <li>forEach(callback) – Executes a function for each element.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].forEach(x => console.log(x))</em>
+      </li>
+      <li>map(callback) – Creates a new array by transforming each element.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].map(x => x * 2) → [2, 4, 6]</em>
+      </li>
+      <li>filter(callback) – Filters elements that match a condition.<br>
+        <em style="color:#0066cc;"> [1, 2, 3, 4].filter(x => x % 2 === 0) → [2, 4]</em>
+      </li>
+      <li>reduce(callback, initialValue) – Reduces to a single value.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].reduce((a, b) => a + b, 0) → 6</em>
+      </li>
+      <li>find(callback) – Finds the first matching element.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].find(x => x > 1) → 2</em>
+      </li>
+      <li>findIndex(callback) – Finds the index of the first match.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].findIndex(x => x === 2) → 1</em>
+      </li>
+      <li>some(callback) – Checks if any element passes a condition.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].some(x => x > 2) → true</em>
+      </li>
+      <li>every(callback) – Checks if all elements pass a condition.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].every(x => x > 0) → true</em>
+      </li>
+    </ul>
+  
+    
+    
+    <h2>🛠️ Modifying Arrays</h2>
+    <ul>
+      <li>push(item) – Add item(s) to end.<br>
+        <em style="color:#0066cc;"> let arr = [1, 2]; arr.push(3) → [1, 2, 3]</em>
+      </li>
+      <li>pop() – Remove last item.<br>
+        <em style="color:#0066cc;"> let arr = [1, 2, 3]; arr.pop() → [1, 2]</em>
+      </li>
+      <li>unshift(item) – Add item(s) to beginning.<br>
+        <em style="color:#0066cc;"> let arr = [2, 3]; arr.unshift(1) → [1, 2, 3]</em>
+      </li>
+      <li>shift() – Remove first item.<br>
+        <em style="color:#0066cc;"> let arr = [1, 2, 3]; arr.shift() → [2, 3]</em>
+      </li>
+      <li>splice(start, deleteCount, ...items) – Add/remove items.<br>
+        <em style="color:#0066cc;"> let arr = [1, 2, 3]; arr.splice(1, 1, 4) → [1, 4, 3]</em>
+      </li>
+      <li>sort(compareFunction) – Sort array in place.<br>
+        <em style="color:#0066cc;"> [3, 1, 2].sort() → [1, 2, 3]</em>
+      </li>
+      <li>reverse() – Reverse array in place.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].reverse() → [3, 2, 1]</em>
+      </li>
+      <li>fill(value, start, end) – Fill part of array.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].fill(0, 1, 3) → [1, 0, 0]</em>
+      </li>
+      <li>copyWithin(target, start, end) – Copy elements within array.<br>
+        <em style="color:#0066cc;"> [1, 2, 3, 4].copyWithin(0, 2, 4) → [3, 4, 3, 4]</em>
+      </li>
+    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>push()</td>
+          <td>Add item(s) to the <strong>end</strong></td>
+          <td>
+            <pre>[1, 2].push(3) → [1, 2, 3]</pre>
+          </td>
+        </tr>
+        <tr>
+          <td>pop()</td>
+          <td>Remove item from the <strong>end</strong></td>
+          <td>
+            <pre>[1, 2, 3].pop() → [1, 2]</pre>
+          </td>
+        </tr>
+        <tr>
+          <td>unshift()</td>
+          <td>Add item(s) to the <strong>beginning</strong></td>
+          <td>
+            <pre>[2, 3].unshift(1) → [1, 2, 3]</pre>
+          </td>
+        </tr>
+        <tr>
+          <td>shift()</td>
+          <td>Remove item from the <strong>beginning</strong></td>
+          <td>
+            <pre>[1, 2, 3].shift() → [2, 3]</pre>
+          </td>
+        </tr>
+        <tr>
+          <td>splice()</td>
+          <td>Add/remove elements at any position</td>
+          <td>
+            <pre>[1, 2, 3].splice(1, 1, 4) → [1, 4, 3]</pre>
+          </td>
+        </tr>
+        <tr>
+          <td>slice()</td>
+          <td>Extract part of an array (non-destructive)</td>
+          <td>
+            <pre>[1, 2, 3, 4].slice(1, 3) → [2, 3]</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+  
+    <h2>🧱 Creating & Combining Arrays</h2>
+    <ul>
+      <li>concat(...arrays) – Merge arrays.<br>
+        <em style="color:#0066cc;"> [1, 2].concat([3, 4]) → [1, 2, 3, 4]</em>
+      </li>
+      <li>slice(start, end) – Get a portion of the array.<br>
+        <em style="color:#0066cc;"> [1, 2, 3, 4].slice(1, 3) → [2, 3]</em>
+      </li>
+      <li>flat(depth) – Flatten nested arrays.<br>
+        <em style="color:#0066cc;"> [1, [2, [3]]].flat(2) → [1, 2, 3]</em>
+      </li>
+      <li>flatMap(callback) – Map and flatten the array.<br>
+        <em style="color:#0066cc;"> [1, 2].flatMap(x => [x, x * 2]) → [1, 2, 2, 4]</em>
+      </li>
+      <li>
+          join() — Convert array to string<br />
+          <em style="color:#0066cc;"> [1, 2, 3].join('-') → "1-2-3"</em>
+        </li>
+        <li>
+          flat() — Flatten nested arrays<br />
+          <em style="color:#0066cc;"> [1, [2, [3]]].flat(2) → [1, 2, 3]</em>
+        </li>
+        <li>
+          toReversed() — Return a reversed copy (ES2023+)<br />
+          <em style="color:#0066cc;"> [1, 2, 3].toReversed() → [3, 2, 1]</em>
+        </li>
+    </ul>
+  
+    <h2>🔍 Searching & Checking</h2>
+    <ul>
+      <li>includes(value) – Check if array contains a value.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].includes(2) → true</em>
+      </li>
+      <li>indexOf(value) – First index of value.<br>
+        <em style="color:#0066cc;"> [1, 2, 3, 2].indexOf(2) → 1</em>
+      </li>
+      <li>lastIndexOf(value) – Last index of value.<br>
+        <em style="color:#0066cc;"> [1, 2, 3, 2].lastIndexOf(2) → 3</em>
+      </li>
+      <li>includes() — Check if value exists<br>
+          <em style="color:#0066cc;"> [1, 2, 3].includes(2) → true</em>
+      </li>
+      <li>indexOf() — Find index of first occurrence<br>
+          <em style="color:#0066cc;"> [1, 2, 3, 2].indexOf(2) → 1</em>
+      </li>
+      <li>lastIndexOf() — Find index of last occurrence<br>
+          <em style="color:#0066cc;"> [1, 2, 3, 2].lastIndexOf(2) → 3</em>
+      </li>
+      <li>find() — Find first matching element<br>
+          <em style="color:#0066cc;"> [1, 2, 3, 4].find(n => n > 2) → 3</em>
+      </li>
+      <li>findIndex() — Find index of first matching element<br>
+          <em style="color:#0066cc;"> [1, 2, 3, 4].findIndex(n => n > 2) → 2</em>
+      </li>
+      <li>filter() — Return all elements that match condition<br>
+          <em style="color:#0066cc;"> [1, 2, 3, 4].filter(n => n > 2) → [3, 4]</em>
+      </li>
+      <li>some() — Check if any element matches<br>
+          <em style="color:#0066cc;"> [1, 2, 3].some(n => n > 2) → true</em>
+      </li>
+      <li>every() — Check if all elements match<br>
+          <em style="color:#0066cc;"> [1, 2, 3].every(n => n > 0) → true</em>
+      </li>
+    </ul>
+  
+    
+  
+    <h2>🧾 Utility Methods</h2>
+    <ul>
+      <li>Array.isArray(value) – Check if value is an array.<br>
+        <em style="color:#0066cc;"> Array.isArray([1, 2, 3]) → true</em>
+      </li>
+      <li>join(separator) – Join elements into a string.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].join("-") → "1-2-3"</em>
+      </li>
+      <li>toString() – Convert array to string.<br>
+        <em style="color:#0066cc;"> [1, 2, 3].toString() → "1,2,3"</em>
+      </li>
+      <li>
+        length — Property: number of elements<br>
+        <em style="color:#0066cc;">[1, 2, 3].length → 3</em>
+      </li>
+      <li>
+        Array.isArray() — Check if a value is an array<br>
+        <em style="color:#0066cc;">Array.isArray([1, 2]) → true</em>
+      </li>
+      <li>
+        fill() — Fill array with a static value<br>
+        <em style="color:#0066cc;">[1, 2, 3].fill(0) → [0, 0, 0]</em>
+      </li>
+      <li>
+        from() — Create array from array-like or iterable<br>
+        <em style="color:#0066cc;">Array.from('abc') → ['a', 'b', 'c']</em>
+      </li>
+      <li>
+        of() — Create array from arguments<br>
+        <em style="color:#0066cc;">Array.of(1, 2, 3) → [1, 2, 3]</em>
+      </li>
+      <li>
+        at() — Access by index (supports negative indices)<br>
+        <em style="color:#0066cc;">[1, 2, 3].at(-1) → 3</em>
+      </li>
+      <li>
+        keys(), values(), entries() — Get iterators for array contents<br>
+        <em style="color:#0066cc;">
+          [...[1, 2].keys()] → [0, 1]<br>
+          [...[1, 2].values()] → [1, 2]<br>
+          [...[1, 2].entries()] → [[0, 1], [1, 2]]
+        </em>
+      </li>
+    </ul>
+      <div class="tml">
+          <div class="tml-title">JavaScript Code</div>
+          <div class="tml-body">
+              <p>const numbers = [1, 2, 3, 4, 5];</p>
+              <p>
+                  const doubled = numbers.map(n =&gt; n * 2);      // [2, 4, 6, 8, 10]<br>
+                  const evens = numbers.filter(n =&gt; n % 2 === 0); // [2, 4]<br>
+                  const sum = numbers.reduce((a, b) =&gt; a + b);  // 15<br>
+                  const hasThree = numbers.includes(3);         // true
+              </p>         
+          </div>
+      </div>
+  
+      <div class="tml">
+          <div class="tml-title">JavaScript Array Methods</div>
+          <div class="tml-body">
+              <p>let arr = [1, 2, 3];</p>
+              <p>// Add to end<br>
+              arr.push(4);           // [1, 2, 3, 4]</p>
+              <p>// Remove from end<br>
+              arr.pop();             // [1, 2, 3]</p>
+              <p>// Add to beginning<br>
+              arr.unshift(0);        // [0, 1, 2, 3]</p>
+              <p>// Remove from beginning<br>
+              arr.shift();           // [1, 2, 3]</p>
+              <p>// Add/remove at specific index<br>
+              arr.splice(1, 1, 9);   // [1, 9, 3] — remove 1 item at index 1, insert 9</p>
+              <p>// Extract sub-array (non-destructive)<br>
+              arr.slice(0, 2);       // [1, 9]</p>
+          </div>
+      </div>
+      
+      <p>Here's a crisp, ES6+ version of the adding & removing array methods with comments showing output:</p>
+      
+      <div class="tml">
+          <div class="tml-title">JavaScript Array Methods (ES6 - Immutable)</div>
+          <div class="tml-body">
+              <p>let arr = [1, 2, 3];</p>
+              <p>// ✅ Add to end (ES6)<br>
+              arr = [...arr, 4];            // [1, 2, 3, 4]</p>
+              <p>// ✅ Remove from end (immutably)<br>
+              arr = arr.slice(0, -1);       // [1, 2, 3]</p>
+              <p>// ✅ Add to beginning<br>
+              arr = [0, ...arr];            // [0, 1, 2, 3]</p>
+              <p>// ✅ Remove from beginning<br>
+              arr = arr.slice(1);           // [1, 2, 3]</p>
+              <p>// ✅ Add/remove at any index<br>
+              arr = [...arr.slice(0, 1), 9, ...arr.slice(2)];  // [1, 9, 3]</p>
+              <p>// ✅ Copy part of array<br>
+              const sub = arr.slice(0, 2);  // [1, 9]</p>
+          </div>
+      </div>
+      
+      <div class="tml">
+          <div class="tml-title">✅ What <strong>concat</strong> Does</div>
+          <div class="tml-body">
+              <p><strong>concat()</strong> is a built-in method that:</p>
+              <ul>
+                  <li>Belongs to the Array prototype</li>
+                  <li>Returns a new array</li>
+                  <li>Combines (concatenates) the calling array with one or more arrays or values</li>
+                  <li>Does not modify the original arrays</li>
+              </ul>
+              <p><strong>array1.concat(array2, array3, ..., arrayN)</strong></p>
+              <p>const a = [1, 2];<br>
+                  const b = [3, 4];<br>
+                  const result = a.concat(b);</p>
+                  <p>console.log(result); // [1, 2, 3, 4]</p>
+  
+                  <table class="tml-table">
+                      <thead>
+                          <tr>
+                              <th>Term</th>
+                              <th>Description</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Method</td>
+                              <td>A function attached to an object (like <strong>concat</strong> is to <strong>Array</strong>)</td>
+                          </tr>
+                          <tr>
+                              <td>Prototype Method</td>
+                              <td>Defined on <strong>Array.prototype</strong> so all arrays inherit it</td>
+                          </tr>
+                          <tr>
+                              <td>Immutable</td>
+                              <td>Returns a new array; doesn’t change the original</td>
+                          </tr>
+                      </tbody>
+                  </table>
+          </div>
+      </div>
+      
+      <div class="tml">
+          <div class="tml-title">✅ Combining Arrays: <span class="smallbg">concat()</span> vs Spread Operator</div>
+          <div class="tml-body">
+              <p>const a = [1, 2, 3];<br>
+              const b = [4, 5, 6];</p>
+      
+              <p>const combined = a.concat(b);<br>
+      // or using spread operator:<br>
+              const combined2 = [...a, ...b];</p>
+      
+              <p>console.log(combined);   // [1, 2, 3, 4, 5, 6]<br>
+              console.log(combined2);  // [1, 2, 3, 4, 5, 6]</p>
+          </div>
+      </div>
+      <div class="tml">
+          <div class="tml-title">✅ Summing Two Arrays Element-Wise</div>
+          <div class="tml-body">
+              <p>const a = [1, 2, 3];<br>
+              const b = [4, 5, 6];</p>
+      
+              <p>const sum = a.map((val, index) =&gt; val + b[index]);</p>
+      
+              <p>console.log(sum); // [5, 7, 9]</p>
+          </div>
+      </div>
+      <div class="tml">
+          <div class="tml-title">✅ Zip and Add with Different Lengths (Safe Version) </div>
+          <div class="tml-body">
+              <p>const a = [1, 2, 3];<br>
+              const b = [4, 5];</p>
+      
+              <p>const maxLength = Math.max(a.length, b.length);<br>
+              const result = Array.from({ length: maxLength }, (_, i) =&gt; (a[i] || 0) + (b[i] || 0));</p>
+      
+              <p>console.log(result); // [5, 7, 3]</p>
+          </div>
+      </div>
+      <div class="tml">
+    <div class="tml-title">✅ Combine Arrays and Remove Duplicates</div>
+    <div class="tml-body">
+      <p>const a = [1, 2, 3];<br>
+      const b = [2, 3, 4, 5];</p>
+  
+      <p>// Combine + Remove Duplicates using Set<br>
+      const unique = [...new Set([...a, ...b])];</p>
+  
+      <p>console.log(unique); // [1, 2, 3, 4, 5]</p>
+  
+      <h4>How It Works</h4>
+      <ul>
+        <li><span class="smallbg">[...]</span> spreads the arrays.</li>
+        <li><span class="smallbg">new Set()</span> removes duplicate values (because <span class="smallbg">Set</span> only stores unique items).</li>
+        <li>Another <span class="smallbg">[...]</span> spreads the <span class="smallbg">Set</span> back into an array.</li>
+      </ul>
+    </div>
+  </div>
+  
+        <div class="tml">
+          <div class="tml-title">✅ Sum Arrays and Get Unique Results | Remove Duplicates After Element-wise Addition</div>
+          <div class="tml-body">
+            <p>const a = [1, 2, 3];<br>
+            const b = [3, 2, 1];</p>
+        
+            <p>const sum = a.map((val, i) =&gt; val + (b[i] || 0)); // [4, 4, 4]<br>
+            const uniqueSum = [...new Set(sum)];</p>
+        
+            <p>console.log(uniqueSum); // [4]</p>
+          </div>
+        </div>
+             
+      </div>
+</section>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #212121;
+            color: #fcfcfc;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #dbac52;
+    }
+    code, pre {
+      background: #eee;
+      padding: 0.5rem;
+      display: block;
+      border-left: 4px solid #005a9c;
+      margin: 1rem 0;
+      white-space: pre-wrap;
+    }
+    .diagram {
+      font-family: monospace;
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+    }
+    table {
+        min-width: 40%;
+      border-collapse: collapse;
+      background-color: #fff;
+      color: #000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px 16px;
+      text-align: left;
+    }
+    th {
+      background-color: #e0f0ff;
+    }
+    tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+    .tml{
+        background-color: #202123;
+        color: #d4d4d8;
+        font-family: 'Source Code Pro', monospace, monospace;
+        font-size: 14px;
+        margin: 20px;
+        line-height: 1.5;
+        border-radius: 8px;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgb(0 0 0 / 0.3);
+    }
+    .tml-title{
+      background-color: #333;
+      color: #eee;
+      padding: 8px 16px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .tml-body{
+        padding: 16px;
+    }
+    .tml-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: system-ui, sans-serif;
+        font-size: 15px;
+        margin-top: 10px;
+        background: #212121;color: #fcfcfc;
+    }
+
+    .tml-table th,
+    .tml-table td {
+        border: transparent;
+        border-bottom: 1px solid #736868;
+        padding: 8px 12px;
+        text-align: left;
+        vertical-align: top;
+    }
+    .tml-table tr{background: #212121;}
+    .tml-table th {
+        background-color: #212121;
+        font-weight: 500;
+    }
+  </style>
+</body>
+</html>
