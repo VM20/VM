@@ -19,7 +19,7 @@
 
     <p>Here's a breakdown of the key differences:</p>
 
-    <h2>1. React Compiler (Automatic Optimization)</h2>
+    <h3>1. React Compiler (Automatic Optimization)</h3>
     <ul>
         <li><strong>React 18:</strong> Developers often needed to manually optimize performance using techniques like
             <code>React.memo</code> and <code>useCallback</code> to prevent unnecessary re-renders.</li>
@@ -30,7 +30,7 @@
             performance.</li>
     </ul>
 
-    <h2>2. Server Components (Full Integration)</h2>
+    <h3>2. Server Components (Full Integration)</h3>
     <ul>
         <li><strong>React 18:</strong> Introduced Server Components in an experimental stage, requiring manual
             enablement and offering limited integration.</li>
@@ -47,7 +47,7 @@
         </li>
     </ul>
 
-    <h2>3. New Hooks</h2>
+    <h3>3. New Hooks</h3>
     <p>React 19 introduces several new hooks to simplify common patterns and improve user experience:</p>
     <ul>
         <li><strong><code>useActionState</code>:</strong> Simplifies handling asynchronous actions like form
@@ -61,7 +61,7 @@
             more responsive.</li>
     </ul>
 
-    <h2>4. Improved Hydration &amp; Error Handling</h2>
+    <h3>4. Improved Hydration &amp; Error Handling</h3>
     <ul>
         <li><strong>React 18:</strong> Introduced automatic hydration, but developers could still encounter mismatches
             between server-rendered and client-rendered content.</li>
@@ -72,7 +72,7 @@
             <code>onCaughtError</code> provide better control over error reporting and debugging.</li>
     </ul>
 
-    <h2>5. Concurrent Rendering Enhancements</h2>
+    <h3>5. Concurrent Rendering Enhancements</h3>
     <ul>
         <li><strong>React 18:</strong> Introduced Concurrent Mode, allowing React to prioritize updates and render
             multiple versions of the UI concurrently.</li>
@@ -82,19 +82,19 @@
             for manual <code>startTransition</code> or <code>useTransition</code> hooks.</li>
     </ul>
 
-    <h2>6. Asset &amp; Resource Loading Enhancements</h2>
+    <h3>6. Asset &amp; Resource Loading Enhancements</h3>
     <p>React 19 introduces new preloading APIs (<code>preload</code>, <code>preinit</code>) to optimize resource
         loading, reducing time-to-interactive by efficiently loading critical assets.</p>
 
-    <h2>7. TypeScript Support</h2>
+    <h3>7. TypeScript Support</h3>
     <p>React 19 offers <strong>enhanced TypeScript integration</strong>, making it easier to write type-safe
         applications with better type inference and improved compatibility with popular TypeScript tools.</p>
 
-    <h2>8. Directives for DOM Interactions</h2>
+    <h3>8. Directives for DOM Interactions</h3>
     <p>React 19 introduces directives for handling low-level DOM interactions, reducing the need for <code>useRef</code>
         in many common scenarios.</p>
 
-    <h2>Migration Considerations</h2>
+    <h3>Migration Considerations</h3>
     <p>While React 19 brings substantial benefits, there are some breaking changes and considerations for migration:</p>
     <ul>
         <li><strong>JSX Transform Requirement:</strong> React 19 mandates the use of the new JSX transform.</li>
@@ -104,28 +104,28 @@
             React 19, so thorough testing is recommended.</li>
     </ul>
 
-    <h2>In Summary:</h2>
+    <h3>In Summary:</h3>
     <p>React 19 represents a significant leap forward in React's evolution. Its core focus is on automating performance
         optimizations through the React Compiler, making Server Components a first-class citizen, and providing new
         hooks to simplify complex UI patterns. These changes aim to make React applications faster, more efficient, and
         easier to develop, ultimately leading to a better user and developer experience.</p>
     </section>
-    <script>
-        const toggleButton = document.getElementById('theme-toggle');
-const body = document.body;
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
 
-toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        toggleButton.textContent = 'Switch to Light Mode';
-    } else {
-        toggleButton.textContent = 'Switch to Dark Mode';
-    }
-});
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            toggleButton.textContent = 'Switch to Light Mode';
+        } else {
+            toggleButton.textContent = 'Switch to Dark Mode';
+        }
+    });
 
-    </script>
-    <style>
-        /* Default Light Mode */
+</script>
+<style>
+/* Default Light Mode */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -163,7 +163,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-    </style>
+</style>
 </body>
 
 </html>

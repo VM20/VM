@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #game-container {
+    width: 400px;
+    height: 600px;
+    background: #555;
+    border: 6px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image:
+      linear-gradient(#444 33%, transparent 33%),
+      linear-gradient(#444 66%, transparent 66%);
+    background-size: 100% 200px;
+    position: relative;
+  }
+  
+  #car {
+    position: absolute;
+    bottom: 20px;
+    left: 175px;
+    width: 50px;
+    height: 100px;
+    background: url(car.png) no-repeat center/cover;
+  }
+  
+  #obstacle {
+    position: absolute;
+    top: -60px;
+    width: 50px;
+    height: 50px;
+    background: yellow no-repeat center/contain;
+  }
+  
+  #restartBtn {
+    padding: 0.5rem 1rem;
+  }
+  

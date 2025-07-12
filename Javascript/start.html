@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Racing Game</title>
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    rel="stylesheet">
+  <style>
+    /* Add CSS styling here */
+  </style>
+</head>
+<body>
+  <div id="game-container" class="d-flex justify-content-center align-items-center">
+    <div id="car"></div>
+    <div id="obstacle"></div>
+    <div id="score" class="position-absolute text-white" style="top:10px; left:10px;">Score: 0</div>
+  </div>
+
+  <!-- jQuery & Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/old.js"></script>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      background-color: #515656;
+    }
+
+    #game-container {
+      position: relative;
+      width: 400px;
+      height: 600px;
+      background: url('road.png') repeat-y;
+      overflow: hidden;
+      background: teal;
+    }
+
+    #car {
+      position: absolute;
+      bottom: 10px;
+      left: 175px;
+      width: 50px;
+      height: 100px;
+      background: url(assets/car.png) no-repeat center/cover;
+    }
+
+    #obstacle {
+      position: absolute;
+      top: -100px;
+      width: 50px;
+      height: 50px;
+      background: blue no-repeat center/contain;
+    }
+
+  </style>
+</body>
+</html>
